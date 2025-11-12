@@ -89,7 +89,7 @@ function render() {
   if (!visible.length) {
     const empty = document.createElement("div");
     empty.className = "empty";
-    empty.textContent = "Список пуст — добавьте первую задачу";
+    empty.textContent = "Список пуст, добавьте первую задачу";
     listEl.appendChild(empty);
   } else {
     visible.forEach((task) => frag.appendChild(renderItem(task)));
