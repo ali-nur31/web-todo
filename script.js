@@ -12,7 +12,6 @@ const addBtn = $$("#addBtn");
 const listEl = $$("#list");
 const tpl = $$("#itemTpl");
 const countEl = $$("#count");
-const chips = $$$(".chip");
 
 let tasks = load();
 let filter = "all";
@@ -63,20 +62,6 @@ function load() {
 function persist() {
   localStorage.setItem(storageKey, JSON.stringify(tasks));
 }
-
-function setFilter(key) {
-  filter = key;
-  chips.forEach((c) => {
-    const active = c.dataset.filter === key;
-    c.classList.toggle("active", active);
-    c.setAttribute("aria-selected", active);
-  });
-  render();
-}
-
-chips.forEach((c) =>
-  c.addEventListener("click", () => setFilter(c.dataset.filter)),
-);
 
 function render() {
   listEl.innerHTML = "";

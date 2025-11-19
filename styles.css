@@ -253,18 +253,6 @@ body {
     display: flex;
     gap: 8px;
 }
-.chip {
-    border: 1px solid var(--border);
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: #fff;
-    cursor: pointer;
-}
-.chip.active {
-    border-color: var(--accent-strong);
-    color: var(--accent-strong);
-    box-shadow: 0 0 0 3px var(--ring);
-}
 
 @media (max-width: 560px) {
     .app-card {
